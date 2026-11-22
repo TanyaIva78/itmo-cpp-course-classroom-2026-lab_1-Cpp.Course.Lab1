@@ -1,11 +1,17 @@
-#pragma once
+#pragma once 
 
 namespace lab1::date
 {
 
 struct Date
 {
-    // TODO: Your code
+
+        int year;
+        int month;
+        int day;
+
+        friend bool operator==(const Date&, const Date&) = default;
+
 };
 
 bool is_leap(int year);
@@ -16,4 +22,4 @@ int day_of_week(Date date);
 int days_between(Date date1, Date date2);
 Date add_days(Date date, int delta);
 
-} // namespace lab1::date
+}
